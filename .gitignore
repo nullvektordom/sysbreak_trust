@@ -1,0 +1,29 @@
+# Rust / Cargo
+target/
+**/*.rs.bk
+
+# Foundry
+/out/
+/cache/
+
+# Node
+node_modules/
+package-lock.json
+
+# Env / secrets
+.env
+.env.*
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

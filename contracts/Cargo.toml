@@ -1,0 +1,33 @@
+[workspace]
+members = [
+    "sysbreak-item-nft",
+    "sysbreak-achievement-nft",
+    "sysbreak-credit-bridge",
+    "sysbreak-corporation-dao",
+]
+resolver = "2"
+
+[workspace.dependencies]
+cosmwasm-std = "2.2"
+cosmwasm-schema = "2.2"
+cw-storage-plus = "2.0"
+cw2 = "2.0"
+cw721 = "0.21"
+cw721-base = "0.21"
+cw-ownable = "2.1"
+thiserror = "2"
+schemars = "0.8"
+serde = { version = "1", default-features = false, features = ["derive"] }
+cw-multi-test = "2.4"
+
+[profile.release]
+opt-level = "z"
+debug = false
+rpath = false
+lto = true
+debug-assertions = false
+codegen-units = 1
+panic = "abort"
+incremental = false
+overflow-checks = true
+strip = true

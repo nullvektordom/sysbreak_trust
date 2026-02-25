@@ -1,0 +1,26 @@
+[package]
+name = "sysbreak-achievement-nft"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+description = "SYSBREAK achievement NFT contract (CW-721 compliant, optional soulbound)"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = []
+library = []
+
+[dependencies]
+cosmwasm-std = { workspace = true }
+cosmwasm-schema = { workspace = true }
+cw-storage-plus = { workspace = true }
+cw2 = { workspace = true }
+cw721 = { workspace = true }
+thiserror = { workspace = true }
+schemars = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+cw-multi-test = { workspace = true }

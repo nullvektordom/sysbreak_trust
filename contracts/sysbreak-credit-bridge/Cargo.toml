@@ -1,0 +1,28 @@
+[package]
+name = "sysbreak-credit-bridge"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+description = "SYSBREAK credit bridge: $SHIDO ↔ in-game credits with signature-verified withdrawals"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = []
+library = []
+
+[dependencies]
+cosmwasm-std = { workspace = true }
+cosmwasm-schema = { workspace = true }
+cw-storage-plus = { workspace = true }
+cw2 = { workspace = true }
+thiserror = { workspace = true }
+schemars = { workspace = true }
+serde = { workspace = true }
+sha2 = "0.10"
+
+[dev-dependencies]
+cw-multi-test = { workspace = true }
+k256 = { version = "0.13", features = ["ecdsa"] }
+rand_core = "0.6"
